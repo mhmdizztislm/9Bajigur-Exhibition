@@ -1,0 +1,160 @@
+r<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f3ee">
+<title>9B Art Exhibition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+  <div class="intro" id="intro" aria-label="Opening">
+    <div class="intro-credit">made by 9Bajigur</div>
+  </div>
+
+  <!-- Ganti logo-kelas.png dengan nama file logo kelas milikmu. -->
+  <img class="intro-logo" id="movingLogo" src="assets/logo.jpeg" alt="Logo kelas 9B"
+       onerror="this.style.opacity='0';">
+
+  <div class="site" id="site">
+    <header>
+      <div class="nav-inner">
+        <div class="brand-space" aria-hidden="true"></div>
+        <div class="brand-name">9B Art Exhibition</div>
+        <nav aria-label="Navigasi utama">
+          <a href="#home">Home</a>
+          <a href="#exhibition">Exhibition</a>
+          <a href="#about">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="eyebrow">Class 9B · Art Exhibition</div>
+        <h1>An Exhibition<br>of Creative<br>Expressions.</h1>
+        <div class="hero-bottom">
+          <div class="hero-description">
+            Sebuah ruang untuk menampilkan ide, imajinasi, dan ekspresi
+            melalui karya seni dari kelas 9B.
+          </div>
+          <div class="edition">A collection of works · 2026</div>
+        </div>
+      </section>
+
+      <section class="section" id="exhibition">
+        <div class="section-heading">
+          <h2>The Collection</h2>
+          <span>Selected works · 9B</span>
+        </div>
+        <div class="gallery-Grid" id="galleryGrid">
+          </div>
+        </div>
+      </section>
+      <section class="section" id="about" style="padding-top:0;">
+        <div class="section-heading">
+          <h2>About the Exhibition</h2>
+          <span>9Bajigur</span>
+        </div>
+        <p style="max-width:560px;color:var(--muted);font-size:.9rem;line-height:1.9;margin-top:25px;">
+          A shared space celebrating creativity, perspective, and the many ways
+          an idea can become a work of art.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>9B ART EXHIBITION</span>
+        <span>Made by 9Bajigur · 2026</span>
+      </div>
+    </footer>
+
+<!-- ARTWORK DETAIL VIEWER -->
+<section
+  class="artwork-viewer"
+  id="artworkViewer"
+  aria-hidden="true"
+>
+  <!-- Tombol kembali -->
+  <button
+    class="viewer-back"
+    id="viewerBack"
+    type="button"
+  >
+    ← Back
+  </button>
+
+  <!-- Kontainer utama -->
+  <div class="viewer-content">
+
+    <!-- Bagian gambar -->
+    <div class="viewer-art-stage">
+      <div class="viewer-art-frame">
+        <img
+          id="viewerImage"
+          src=""
+          alt="Artwork"
+        >
+      </div>
+    </div>
+
+    <!-- Bagian informasi -->
+    <div class="viewer-details">
+
+      <span id="viewerNumber">
+        ARTWORK No. 001
+      </span>
+
+      <h2 id="viewerTitle">
+        Artwork Title
+      </h2>
+
+      <p id="viewerArtist">
+        Artist Name
+      </p>
+
+      <div class="viewer-divider"></div>
+
+      <dl class="viewer-meta">
+
+        <div>
+          <dt>Year</dt>
+          <dd id="viewerYear">2026</dd>
+        </div>
+
+        <div>
+          <dt>Medium</dt>
+          <dd id="viewerMedium">Mixed Media</dd>
+        </div>
+
+        <div>
+          <dt>Materials</dt>
+          <dd id="viewerMaterials">Materials</dd>
+        </div>
+
+      </dl>
+
+    </div>
+  </div>
+</section>
+
+  </div>
+
+<script>
+  const intro = document.getElementById('intro');
+  const site = document.getElementById('site');
+  const logo = document.getElementById('movingLogo');
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      intro.classList.add('done');
+      site.classList.add('visible');
+      document.body.classList.remove('locked');
+      logo.classList.add('to-nav');
+    }, 3900);
+  });
+</script>
+<script src="script.js" defer></script>
+</body>
+</html>
